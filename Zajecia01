@@ -1,0 +1,32 @@
+ZAD 2.1
+Zadanie 2.1
+select MIN(last_name) as customer_last_name, city || ', ' || state || ' ' || zip as mailing_address from f_customers group by city, state, zip
+
+Zadanie 2.3
+select '*** ' || first_name || '*** ' || first_name as "super star" from f_staffs where first_name in ('Sue', 'Bob', 'Monique');
+Zadanie 2.5
+select last_name as "eployee last name", salary as "current salary", salary * 1.05 as "salary with 5% raise" from f_staffs
+zadanie 2.7
+select cd_number as "Inventory Item", title as "CD Title", producer as "music producer", year as "year purchased" from D_CDsz
+
+ZAD 2.2
+zadanie 2.1
+select first_name, last_name, city, state, zip from f_customers where id = 456
+zadanie 2.2
+select give_away, start_date, end_date from f_promotional_menus where lower(give_away) = 'ballpen and highlighter'
+zadanie 2.5
+select title, year from D_CDs where year < 2000;
+zadanie 2.10
+select title, year from D_CDs where year != 2000;
+zadanie 2.11
+select first_name, last_name, birthdate from f_staffs where birthdate < to_date('1980-01-01', 'YYYY-MM-DD')
+
+ZAD 2.3
+zadanie 2.1
+select first_name, last_name, salary from f_staffs where salary between 5 and 10
+zadanie 2.4
+select title from D_CDs where lower(title) like '_a%'
+zadanie 2.5
+select first_name, last_name, auth_expense_amt from d_partners where auth_expense_amt is null 
+zadanie 2.8
+select title, type_code from d_songs where type_code in (77, 12, 1)
