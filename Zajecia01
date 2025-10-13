@@ -27,6 +27,9 @@ select first_name, last_name, salary from f_staffs where salary between 5 and 10
 zadanie 2.4
 select title from D_CDs where lower(title) like '_a%'
 zadanie 2.5
-select first_name, last_name, auth_expense_amt from d_partners where auth_expense_amt is null 
+select first_name, last_name, auth_expense_amt from d_partners where auth_expense_amt is null
+zadanie 2.6
+select first_name, last_name as "Possible Candidates" from employees where lower(last_name) like '%s'
 zadanie 2.8
 select title, type_code from d_songs where type_code in (77, 12, 1)
+
