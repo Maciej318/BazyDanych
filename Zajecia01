@@ -7,7 +7,7 @@ select '*** ' || first_name || '*** ' || first_name as "super star" from f_staff
 Zadanie 2.5
 select last_name as "eployee last name", salary as "current salary", salary * 1.05 as "salary with 5% raise" from f_staffs
 zadanie 2.7
-select cd_number as "Inventory Item", title as "CD Title", producer as "music producer", year as "year purchased" from D_CDsz
+select cd_number as "Inventory Item", title as "CD Title", producer as "music producer", year as "year purchased" from D_CDs
 
 ZAD 2.2
 zadanie 2.1
