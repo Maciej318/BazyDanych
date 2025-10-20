@@ -1,0 +1,42 @@
+3.1
+zad.1
+SELECT code, description
+FROM d_themes
+WHERE code >200 AND description IN('Tropical', 'Football', 'Carnival');
+SELECT code, description
+FROM d_themes
+WHERE code >200 OR description IN('Tropical', 'Football', 'Carnival');
+Ponieważ and zwraca wyniki gdy oba warunki są prawdziwe a or gdy jeden z nich jest prawdziwy.
+zad.2
+select last_name from employees where last_name like '%e%' and last_name like '%i%'
+zad.3
+select first_name, last_name, salary, staff_type from f_staffs where salary > 6.50 and staff_type <> 'Order Taker'
+zad.4
+select last_name from employees where last_name like 'D%' and last_name like '%a%' and last_name like '%e%' 
+zad.5
+SELECT LOC_TYPE, address
+FROM d_venues
+WHERE LOC_TYPE <> 'Private Home';
+zad.7
+SELECT employee_id, first_name, last_name, hire_date, salary
+FROM employees
+WHERE hire_date > DATE '1998-05-31' 
+  AND hire_date < DATE '1999-06-01'
+  AND salary < 8000
+  AND last_name LIKE '%en%';
+zad.8
+SELECT email, hire_date, salary
+FROM employees
+WHERE hire_date > DATE '1996-05-31' 
+  AND salary > 9000
+3.2
+zad.1
+SELECT employee_id, first_name, last_name
+FROM employees;
+zad.2
+SELECT TITLE, year
+FROM d_cds
+ORDER BY year ASC, TITLE ASC;
+zad.3
+
+
