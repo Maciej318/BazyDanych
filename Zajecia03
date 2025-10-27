@@ -1,1 +1,76 @@
+4.1
+zad. 4.3
+select LENGTH('Oracle Internet Academy') from DUAL
+
+zad. 4.4
+select INSTR('Oracle Internet Academy', 'I') from DUAL
+
+zad. 4.5
+SELECT 
+    LPAD('Oracle', 10, '*') || LPAD('internet', 12, '*') || LPAD('academy', 11, '*') || lPAD(' ', 5, '*')
+FROM dual;
+
+zad. 4.9
+SELECT 
+    'ZOE TWEE 1009 OLIVER AVENUE BOSTON, MA 12889' AS ADDRESS
+FROM 
+    F_CUSTOMERS;
+where id ='456'
+zad. 4.10
+SELECT 
+    SUBSTR(first_name, 1, 1) || last_name AS Name,
+    salary,
+    department_id
+FROM 
+    EMPLOYEES
+WHERE 
+    department_id = :dep_id
+
+4.2
+zad. 4.1
+SELECT 
+    last_name,
+    salary,
+    ROUND(salary / 1.55, 2) AS new_salary
+FROM 
+    EMPLOYEES
+WHERE 
+    employee_id BETWEEN 100 AND 102;
+zad.4.2
+SELECT 
+    last_name,
+    salary,
+    TRUNC(salary * 1.05333, 2) AS new_salary
+FROM 
+    EMPLOYEES
+WHERE 
+    department_id = 80;
+zad.4.5
+select last_name, salary, salary / 3 as devided_salary
+from employees
+where mod(salary, 3) = 0
+4.3
+zad. 4.1
+
+SELECT 
+    ROUND(MONTHS_BETWEEN(SYSDATE, event_date)) AS months_difference
+FROM 
+    D_EVENTS
+WHERE 
+    name = 'Vigil wedding';
+zad. 4.2
+SELECT 
+    ROUND(MONTHS_BETWEEN(TO_DATE('2025-08-01', 'YYYY-MM-DD'), TO_DATE('2025-06-01', 'YYYY-MM-DD')) * 30.5) AS Days
+FROM 
+    dual;
+zad. 4.5
+SELECT 
+    LAST_DAY(TO_DATE('2005-06-01', 'YYYY-MM-DD')) AS last_day_of_june
+FROM 
+    dual;
+zad. 4.10
+SELECT 
+    NEXT_DAY(TO_DATE('2025-07-06', 'YYYY-MM-DD'), 'FRIDAY') AS FirstFriday
+FROM 
+    dual;
 
