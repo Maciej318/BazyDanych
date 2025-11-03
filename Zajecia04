@@ -1,0 +1,72 @@
+5.1
+
+zad. 5.1
+SELECT 
+    last_name, 
+    TO_CHAR(birthdate, 'FMMonth FMDD, YYYY') AS formatted_birthdate
+FROM 
+    f_staffs;
+
+zad 5.3
+SELECT 
+    'The promotion began on the ' || 
+    TO_CHAR(start_date, 'FMDDth') || 
+    ' of ' || 
+    TO_CHAR(start_date, 'FMMonth YYYY') AS promotion_message
+FROM 
+    F_PROMOTIONAL_MENUS
+WHERE
+    code = 110;
+
+zad. 5.5
+SELECT employee_id as ID, first_name, last_name , TO_CHAR(salary, '$99,999.99') AS Salary
+from employees
+zad. 5.8
+SELECT TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'FMMonth ddth, YYYY') AS "Format1",
+       UPPER(TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'FMMonth DDth, YYYY')) AS "Format2",
+       TO_CHAR(TO_DATE('25-Dec-2004', 'DD-Mon-YYYY'), 'DDth FMMonth, YYYY') AS "Format3"
+FROM dual;
+
+5.2
+
+zad 5.1
+select name, start_date,
+nvl2(end_date, 'end in two weeks', to_char(sysdate, 'DD-Mon-YYYY')) as prom from f_promotional_menus;
+zad 5.2
+select last_name, nvl(overtime_rate, 0) as "overtime status"
+from f_staffs
+zad.5.7
+SELECT 
+    first_name, 
+    last_name, 
+    NULLIF(TO_CHAR(hire_date, 'Month'), 'September') AS month_of_hire
+FROM 
+    EMPLOYEES;
+
+5.3
+
+zad 5.1
+SELECT 
+    CASE duration
+        WHEN '2 min' THEN 'shortest'   
+        WHEN '10 min' THEN 'longest'
+        ELSE TO_CHAR(duration)               
+    END AS "Play Times"
+FROM 
+    d_songs;
+
+zad 5.2
+SELECT 
+    department_id,
+    last_name,
+    salary,
+    CASE salary
+        WHEN 10 THEN salary * 1.25
+        WHEN 90 THEN salary * 1.5
+        WHEN 130 THEN salary * 1.75
+        ELSE salary
+    END AS "New Salary"
+FROM 
+    employees;
+
+zad. 5.3
