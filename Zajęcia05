@@ -1,0 +1,24 @@
+12-1
+
+zad. 2
+insert into copy_d_cds(CD_Number, Title, Producer, Year) values(
+97, 'Celebrate the Day', 'R & B Inc.', 2003
+)
+zad.6
+INSERT INTO rep_email (id, first_name, last_name, email_address)
+SELECT employee_id, first_name, last_name, email
+FROM employees
+WHERE job_id = 'SA-REP';
+
+12-2
+zad. 1
+UPDATE copy_f_food_items
+SET price = 3.75
+WHERE DESCRIPTION = 'strawberry shake';
+
+UPDATE copy_f_food_items
+SET price = 1.20
+WHERE DESCRIPTION = 'fries';
+
+zad.2
+
