@@ -1,0 +1,32 @@
+13-1
+
+zad. 2
+create table grand_candidates(
+    student_id number(6),
+    first_name varchar2(30),
+    last_name varchar2(30),
+    credits number(3),
+    graduation_date DATE
+);
+
+zad. 4
+CREATE TABLE Brzozowski_table AS 
+SELECT * FROM grand_candidates
+
+13-3
+
+zad. 3
+INSERT INTO employees (employee_id, first_name, last_name, email, hire_date,
+job_id)
+VALUES(211, 'Warol', 'Kojtyła', 'Warol@', SYSDATE, 'AD_VP');
+
+zad. 9
+RENAME o_jobs TO o_job_description;
+
+zad. 10
+a) CREATE TABLE copy_f_staffs AS
+SELECT * FROM f_staffs;
+
+b)DESCRIBE copy_f_staffs;
+
+c)DROP TABLE copy_f_staffs;
