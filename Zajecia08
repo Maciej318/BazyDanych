@@ -1,0 +1,79 @@
+14.1
+zad. 6
+create table global_locations (
+    id number(3) primary key,
+    name varchar2(100) not null,
+    date_opened date not null,
+    address varchar2(150) not null,
+    city varchar2(50) not null,
+    zip_postal_code varchar2(30) not null,
+    phone varchar2(15) not null,
+    email varchar2(100) unique,
+    manager_id number(3),
+    emergency_contact varchar(100) 
+)
+
+zad. 9
+create table global_locations (
+    id number(3) primary key,
+    name varchar2(100) not null,
+    date_opened date not null,
+    address varchar2(150) not null,
+    city varchar2(50) not null,
+    zip_postal_code varchar2(30) not null,
+    phone varchar2(15) not null,
+    email varchar2(100),
+    manager_id number(3),
+    emergency_contact varchar(100) 
+
+
+    CONSTRAINT global_loc_email_uq UNIQUE (email)
+)
+14.2
+
+zad.3
+create table animals (
+    animal_id NUMBER(6),
+    name VARCHAR2(25),
+    license_tag_number NUMBER(10),
+    admit_date DATE,
+    adoption_id NUMBER(5),
+    vaccination_date DATE
+)
+
+
+zad.4
+INSERT INTO animals (
+    animal_id,
+    name,
+    license_tag_number,
+    admit_date,
+    adoption_id,
+    vaccination_date
+)
+VALUES (
+    101,
+    'Spot',
+    35540,
+    DATE '2004-10-10',
+    205,
+    DATE '2004-10-12'
+);
+
+14.3
+
+zad. 2
+create table copy_d_clients as (select * from d_clients) 
+
+ALTER TABLE copy_d_clients
+ADD CONSTRAINT copy_d_clients_pk
+PRIMARY KEY (CLIENT_NUMBER);
+
+zad.3
+create table copy_d_events as (select * from d_events) 
+
+ALTER TABLE copy_d_events
+ADD CONSTRAINT copy_d_events_fk
+FOREIGN KEY (client_number)
+REFERENCES copy_d_clients (client_number);
+
